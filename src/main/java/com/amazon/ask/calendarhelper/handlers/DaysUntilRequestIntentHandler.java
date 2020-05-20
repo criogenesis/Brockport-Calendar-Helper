@@ -14,8 +14,6 @@ import com.amazon.ask.model.slu.entityresolution.ValueWrapper;
 import me.xdrop.fuzzywuzzy.FuzzySearch;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
@@ -109,12 +107,6 @@ public class DaysUntilRequestIntentHandler implements IntentRequestHandler
             System.out.println("There are " + daysUntil + " days" + " until " + theEvent);
         }
 
-
-
-
-
-
-
     }
 
     @Override
@@ -192,10 +184,6 @@ public class DaysUntilRequestIntentHandler implements IntentRequestHandler
         {
             myFinalEventValue = "Spring Recess Begins";
         }
-        List<DateInfo> dateList = null;
-
-
-
 
         String finalOutput = "";
         try {
@@ -224,13 +212,11 @@ public class DaysUntilRequestIntentHandler implements IntentRequestHandler
                 countList.set(0, countList.get(0) + 1);
 
             });
-//            SimpleDateFormat dateFormat = new SimpleDateFormat("MMMMM d, yyyy");
-//            finalDate = dateFormat.format(exampleDate.get(0).getDate());
 
             Date foundDate = exampleDate.get(0).getDate();
-            //String theEvent = brockportCalendar.getCleanEventName(brockportCalendar.getEventName(foundDate));
             String theEvent = myFinalEventValue;
             theEvent = brockportCalendar.getCleanEventName(theEvent);
+
             // Headless device
             LocalDate finalLocalDate = new java.sql.Date(foundDate.getTime()).toLocalDate();
             int daysUntil = (int) lDate.until(finalLocalDate, ChronoUnit.DAYS);

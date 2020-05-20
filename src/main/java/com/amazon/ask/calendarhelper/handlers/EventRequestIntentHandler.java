@@ -35,7 +35,6 @@ public class EventRequestIntentHandler implements IntentRequestHandler {
     public Optional<Response> handle(HandlerInput input, IntentRequest intentRequest) {
         //given in yyyy-mm-dd
         Date date = new Date(0,0,0);
-        Date compDate = new Date(0,0,0);
         String semester = "";
         String eventName = "";
         String title = "Calendar Response";

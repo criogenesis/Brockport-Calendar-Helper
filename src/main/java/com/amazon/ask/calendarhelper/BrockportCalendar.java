@@ -177,9 +177,6 @@ public class BrockportCalendar {
         // Remove all non-alphanumeric characters from the event name.
         eventName = eventName.toLowerCase().replaceAll("[^a-z0-9]", "");
 
-//        Date eventDate = null;
-//        double eventSimilarity = 0.0;
-
         // Iterate through every key-value pair and compare the event name similarity to the event in the current loop
         // state.
         for (Map.Entry<String, Date> entry : CALENDAR.entrySet()) {
@@ -187,22 +184,9 @@ public class BrockportCalendar {
             String event = entry.getKey();
             String tempEvent = entry.getKey().toLowerCase().replaceAll("[^a-z0-9]", "");
             Date tempDate = entry.getValue();
-//            if (tempEvent.contains(eventName)) {
-//                eventDate = tempDate;
-//                eventSimilarity = 1.0;
-//            } else {
-//                double tempSimilarity = similarity(eventName, tempEvent);
-//
-//                if (tempSimilarity >= 0.20 && tempSimilarity > eventSimilarity) {
-//                    eventDate = tempDate;
-//                    eventSimilarity = tempSimilarity;
-//                }
-//            }
             insertDate(new DateInfo(event,
                     tempDate,
                     FuzzySearch.weightedRatio(eventName, tempEvent)));
-            //System.out.println(tempEvent);
-            //System.out.println(FuzzySearch.partialRatio(eventName, tempEvent));
         }
 
         return dates;
@@ -216,7 +200,6 @@ public class BrockportCalendar {
      *         null if no event is found.
      */
     public String getEventName(Date eventDate) {
-//        final String[] eventName = {null};
         List<String> eventList = new ArrayList<>();
         String builtString = "";
         // Iterate through every key-value pair and compare the current date to eventDate. If they are the same date,
@@ -265,6 +248,7 @@ public class BrockportCalendar {
         }
         return false;
     }
+
     boolean isInFall(Date testDate) {
         int theMonth = testDate.getMonth();
         if(theMonth >= 7 && theMonth <= 11)
@@ -299,30 +283,4 @@ public class BrockportCalendar {
 
         dates.sort(Comparator.comparing(o -> ((DateInfo) o).getSimilarity()).reversed());
     }
-    /**
-     * Calculates the similarity between the two given {@link String}s.
-     *
-     * @param s1 The first string to compare.
-     * @param s2 The second string to compare.
-     * @return The calculated similarity.
-     */
-//    public double similarity(String s1, String s2) {
-//        String longer = s1;
-//        String shorter = s2;
-//
-//        // Longer should always have the greater length.
-//        if (s1.length() < s2.length()) {
-//            longer = s2;
-//            shorter = s1;
-//        }
-//
-//        int longerLength = longer.length();
-//
-//        // If both strings are of zero length.
-//        if (longerLength == 0) {
-//            return 1.0;
-//        }
-//
-//        return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) / (double) longerLength;
-//    }
 }

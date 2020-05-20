@@ -49,7 +49,6 @@ public class DateRequestIntentHandler implements IntentRequestHandler {
         eventDates.forEach(dateInfo -> {
             if (dateInfo.getSimilarity() > highestSimilarity[0].get(0))
             {
-                //System.out.println(highestSimilarity[0].get(0));
                 if(countList.get(0) == 0)
                 {
                     exampleDate.add(dateInfo);
@@ -70,7 +69,6 @@ public class DateRequestIntentHandler implements IntentRequestHandler {
         System.out.println("This is what was picked VVVVV");
         System.out.println(exampleDate.get(0).getName());
         System.out.println(exampleDate.get(0).getDate());
-        String finalDate = "";
 
     }
 
@@ -91,8 +89,6 @@ public class DateRequestIntentHandler implements IntentRequestHandler {
 
         int tempMatch = 0;
         int fuzzyMatch = 0;
-        int myValueSize = 0;
-        String builtString = "";
 
         String title = "Calendar Response";
         final Slot eventSlot = intentRequest.getIntent().getSlots().get("Event");
@@ -142,7 +138,6 @@ public class DateRequestIntentHandler implements IntentRequestHandler {
                 myFinalEventValue = "Spring Recess Begins";
             }
         }
-        List<DateInfo> dateList = null;
 
 
 

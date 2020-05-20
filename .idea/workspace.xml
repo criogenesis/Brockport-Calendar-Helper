@@ -6,7 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a716d1c-fec1-46d1-b8a7-05d2b45eb657" name="Default Changelist" comment="" />
+    <list default="true" id="1a716d1c-fec1-46d1-b8a7-05d2b45eb657" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BrockportCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BrockportCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/BrockportCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/BrockportCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers/DateRequestIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers/DateRequestIntentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers/DaysUntilRequestIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers/DaysUntilRequestIntentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers/EventRequestIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers/EventRequestIntentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$oduct Requirements Document.docx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +48,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZlpJewdNUZ7xzFtgEqSpWzitDK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,7 +59,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/amazon/ask/calendarhelper/handlers" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39425287" />
